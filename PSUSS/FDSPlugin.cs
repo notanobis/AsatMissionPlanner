@@ -22,7 +22,7 @@ namespace PSUSS
 
         public override string Version
         {
-            get { return "0.10"; }
+            get { return "1.0"; }
         }
 
         public override string Author
@@ -35,12 +35,7 @@ namespace PSUSS
             return true;
         }
 
-        /*    string path = $"{Settings.GetRunningDirectory()}"
-            + Path.DirectorySeparatorChar
-            + "plugins"
-            + Path.DirectorySeparatorChar
-            + "resources"
-            + Path.DirectorySeparatorChar;*/
+    
         public override bool Loaded()
         {
             var MenuCustom = new ToolStripButton();
@@ -66,7 +61,6 @@ namespace PSUSS
             Fire.TextAlign = ContentAlignment.BottomCenter;
             Fire.TextImageRelation = TextImageRelation.ImageAboveText;
             Host.MainForm.MainMenu.Items.Insert(7, Fire);
-            CustomMessageBox.Show("my face is the face i shop, im real when i shop my face");
 
             fire_gui = new FDSUI();
             MissionPlanner.Utilities.ThemeManager.ApplyThemeTo(fire_gui);
